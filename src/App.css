@@ -1,3 +1,28 @@
+body {
+  background-color: rgba(100, 149, 237, 0.1);
+}
+
+input, button, submit {
+  border: none;
+  outline: none;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -27,28 +52,86 @@
   color: #61dafb;
 }
 
-.task {
+.main {
+  padding: 4%;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: rgba(128, 0, 128, 0.2);
+  position: absolute;
+  top: 30%;
+  margin-bottom: 30%;
+}
+
+.main .task-list {
+  text-align: left;
+  width: 100%;
+}
+
+.main .task-list .task {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 90%;
 }
 
-.task .task-name {
+.main .task-list .task .task-name {
   font-size: 2em;
+  max-width: 80%;
 }
 
-.task .task-checkbox {
-  width: 2em;
+.main .task-list .task .task-checkbox {
+  width: 15%;
   height: 2em;
 }
 
-.task-list {
-  text-align: left;
+.main .hero-button {
+  margin-top: 3%;
+  color: white;
+  background-color: transparent;
+  padding: 2%;
+  width: 30%;
+  min-height: 3em;
+  border: 5px solid transparent;
+  -o-border-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%) 10;
+     border-image: -webkit-gradient(linear, left top, right top, from(#ff8177), color-stop(0%, #ff867a), color-stop(21%, #ff8c7f), color-stop(52%, #f99185), color-stop(78%, #cf556c), to(#b12a5b)) 10;
+     border-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%) 10;
+  border-radius: 15px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.main .hero-button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff8177), color-stop(0%, #ff867a), color-stop(21%, #ff8c7f), color-stop(52%, #f99185), color-stop(78%, #cf556c), to(#b12a5b));
+  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+
+.complete-task {
+  opacity: 0.2;
+}
+
+.delete-btn {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 0, 0, 0.6);
 }
 /*# sourceMappingURL=App.css.map */

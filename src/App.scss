@@ -1,5 +1,14 @@
+body{
+  background-color: rgba(cornflowerblue, 0.1);
+}
+input, button, submit { border:none; outline:none; } 
 .App {
   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
 }
 
 .App-logo {
@@ -23,24 +32,67 @@
   color: #61dafb;
 }
 
+.main{
 
-.task{
+  padding: 4%;
+  width: 40%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-
-
-  .task-name{
-    font-size: 2em;
-  }
-  .task-checkbox{
-    width: 2em;
-    height: 2em;
+  align-items: flex-start;
+  background-color: rgba(purple, 0.2);
+  position: absolute;
+  top: 30%;
+  margin-bottom: 30%;
+  .task-list{
+    text-align: left;
+    width: 100%;
+    .task{
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      max-width: 90%;
+      
+      .task-name{
+        font-size: 2em;
+        max-width: 80%;
+      }
+      .task-checkbox{
+        width: 15%;
+        height: 2em;
+        
+      }
+    }
     
   }
+
+  .hero-button{
+    margin-top: 3%;
+    
+    color: white;
+    background-color: transparent;
+    padding: 2%;
+    width: 30%;
+    min-height: 3em;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%) 10;
+    border-radius: 15px;
+    transition: 0.4s;
+  }
+  .hero-button:hover{
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  }
+  
+  
 }
 
+.complete-task{
+  opacity: 0.2;
+}
 
-.task-list{
-  text-align: left;
+.delete-btn{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(red, 0.6);
 }
