@@ -1,15 +1,33 @@
 body{
-  background-color: rgba(cornflowerblue, 0.1);
+  background-color: gray;
 }
 input, button, submit { border:none; outline:none; } 
+p{
+  color: whitesmoke;
+  margin: 0.2em;
+}
 .App {
   
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
+  height: 100vh;
  
 }
+h1{
+  color: whitesmoke;
+  text-align: center;
+}
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+
+
 
 .App-logo {
   height: 40vmin;
@@ -31,68 +49,180 @@ input, button, submit { border:none; outline:none; }
 .App-link {
   color: #61dafb;
 }
-
+$border-radius: 22px;
 .main{
 
-  padding: 4%;
-  width: 40%;
+  
+  width: 80%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: rgba(purple, 0.2);
-  position: absolute;
-  top: 30%;
-  margin-bottom: 30%;
+  border-radius: $border-radius;
+  
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  
+  background-size: cover;
+    .banner{
+      
+    
+      border-radius: $border-radius;
+      padding: 3%;
+      width: stretch;
+    .quote-container{
+      font-family: serif;
+      color: white;
+      
+      .quote{
+        
+        font-style: italic;
+        text-align: left;
+      }
+      .quote-author{
+        text-align: right;
+        
+      }
+      .quote-author::before{
+        content: "";
+        position: relative;
+        display: inline-block;
+        bottom: 0.2em;
+        width: 1.2em;
+        height: 3px;
+        background-color: white;
+      }
+    }
+
+  }
+  // .banner::before{
+  //   content: "";
+  //   background-color: rgba(black, 0.8);
+  //   position: relative;
+  //   display:inline-flex ;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 2;
+  //   width: 102%;
+  //   height: 50px;
+  // }
   .task-list{
     text-align: left;
     width: 100%;
+    margin-bottom: 2em;
+    overflow-y: auto;
+    
     .task{
-      display: flex;
+      // display: flex;
+      // align-items: center;
+      // justify-content: space-between;
+      // flex-direction: row;
+      display: grid;
+      grid-template-columns: 0.5fr 2fr 1fr 0.5fr;
       align-items: center;
-      flex-direction: row;
-      max-width: 90%;
       
-      .task-name{
-        font-size: 2em;
-        max-width: 80%;
+      
+      border-bottom: 2px rgba(whitesmoke, 0.4) solid;
+      .task-text{
+        justify-self: flex-start;
+        width: 100%;
+        .task-name{
+          font-size: 1.5em;
+          max-width: 80%;
+          color: white;
+          margin: 0.2em;
+        }
+        .task-note{
+          opacity: 0.6;
+          font-style: italic;
+        }
       }
+      
+      
       .task-checkbox{
-        width: 15%;
-        height: 2em;
+        width: 36%;
+        height: 3em;
         
       }
+      
     }
+    
     
   }
 
   .hero-button{
-    margin-top: 3%;
     
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     background-color: transparent;
     padding: 2%;
-    width: 30%;
-    min-height: 3em;
-    border: 5px solid transparent;
-    border-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%) 10;
-    border-radius: 15px;
+    width: 5em;
+    height: 5em;
+    background-color: lightcoral;
+    border-radius: 50%;
     transition: 0.4s;
   }
   .hero-button:hover{
-    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    background-color: lighten(lightcoral, 10%);
+    
   }
   
-  
+  .add-task-container{
+    background-color: rgba(whitesmoke, 0.3);
+    
+    
+    padding: 0.5em 3em;
+    
+    input{
+      width: 80%;
+      background-color: rgba(whitesmoke, 0.5);
+      font-size: 2em;
+    }
+
+  }
 }
 
 .complete-task{
   opacity: 0.2;
+  text-decoration: line-through;
+  
 }
 
+.priority-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .dot{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .priority-text{
+    font-size: 0.8rem;
+    color: aliceblue;
+    margin-left: 10%;
+  }
+}
+
+.priority-select-container{
+  
+  width: 40%;
+  
+  .select-priority{
+    
+    font-size: 1.5em;
+    background-color: rgba(whitesmoke, 0.3);
+  }
+}
 .delete-btn{
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  background-color: rgba(red, 0.6);
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  margin-left: 5em;
+  transition: 0.4s;
+}
+.delete-btn:hover{
+  opacity: 0.5;
 }

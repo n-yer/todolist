@@ -1,10 +1,15 @@
 body {
-  background-color: rgba(100, 149, 237, 0.1);
+  background-color: gray;
 }
 
 input, button, submit {
   border: none;
   outline: none;
+}
+
+p {
+  color: whitesmoke;
+  margin: 0.2em;
 }
 
 .App {
@@ -15,12 +20,25 @@ input, button, submit {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  color: whitesmoke;
+  text-align: center;
+}
+
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
 }
 
 .App-logo {
@@ -53,8 +71,8 @@ input, button, submit {
 }
 
 .main {
-  padding: 4%;
-  width: 40%;
+  width: 80%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,76 +80,168 @@ input, button, submit {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  background-color: rgba(128, 0, 128, 0.2);
-  position: absolute;
-  top: 30%;
-  margin-bottom: 30%;
+  border-radius: 22px;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-size: cover;
+}
+
+.main .banner {
+  border-radius: 22px;
+  padding: 3%;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+}
+
+.main .banner .quote-container {
+  font-family: serif;
+  color: white;
+}
+
+.main .banner .quote-container .quote {
+  font-style: italic;
+  text-align: left;
+}
+
+.main .banner .quote-container .quote-author {
+  text-align: right;
+}
+
+.main .banner .quote-container .quote-author::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  bottom: 0.2em;
+  width: 1.2em;
+  height: 3px;
+  background-color: white;
 }
 
 .main .task-list {
   text-align: left;
   width: 100%;
+  margin-bottom: 2em;
+  overflow-y: auto;
 }
 
 .main .task-list .task {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 2fr 1fr 0.5fr;
+      grid-template-columns: 0.5fr 2fr 1fr 0.5fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px rgba(245, 245, 245, 0.4) solid;
+}
+
+.main .task-list .task .task-text {
+  justify-self: flex-start;
+  width: 100%;
+}
+
+.main .task-list .task .task-text .task-name {
+  font-size: 1.5em;
+  max-width: 80%;
+  color: white;
+  margin: 0.2em;
+}
+
+.main .task-list .task .task-text .task-note {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.main .task-list .task .task-checkbox {
+  width: 36%;
+  height: 3em;
+}
+
+.main .hero-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  max-width: 90%;
-}
-
-.main .task-list .task .task-name {
-  font-size: 2em;
-  max-width: 80%;
-}
-
-.main .task-list .task .task-checkbox {
-  width: 15%;
-  height: 2em;
-}
-
-.main .hero-button {
-  margin-top: 3%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: white;
   background-color: transparent;
   padding: 2%;
-  width: 30%;
-  min-height: 3em;
-  border: 5px solid transparent;
-  -o-border-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%) 10;
-     border-image: -webkit-gradient(linear, left top, right top, from(#ff8177), color-stop(0%, #ff867a), color-stop(21%, #ff8c7f), color-stop(52%, #f99185), color-stop(78%, #cf556c), to(#b12a5b)) 10;
-     border-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%) 10;
-  border-radius: 15px;
+  width: 5em;
+  height: 5em;
+  background-color: lightcoral;
+  border-radius: 50%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .main .hero-button:hover {
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff8177), color-stop(0%, #ff867a), color-stop(21%, #ff8c7f), color-stop(52%, #f99185), color-stop(78%, #cf556c), to(#b12a5b));
-  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  background-color: #f5aeae;
+}
+
+.main .add-task-container {
+  background-color: rgba(245, 245, 245, 0.3);
+  padding: 0.5em 3em;
+}
+
+.main .add-task-container input {
+  width: 80%;
+  background-color: rgba(245, 245, 245, 0.5);
+  font-size: 2em;
 }
 
 .complete-task {
   opacity: 0.2;
+  text-decoration: line-through;
+}
+
+.priority-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.priority-container .dot {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.priority-container .priority-text {
+  font-size: 0.8rem;
+  color: aliceblue;
+  margin-left: 10%;
+}
+
+.priority-select-container {
+  width: 40%;
+}
+
+.priority-select-container .select-priority {
+  font-size: 1.5em;
+  background-color: rgba(245, 245, 245, 0.3);
 }
 
 .delete-btn {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  background-color: rgba(255, 0, 0, 0.6);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff758c), to(#ff7eb3));
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  margin-left: 5em;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.delete-btn:hover {
+  opacity: 0.5;
 }
 /*# sourceMappingURL=App.css.map */
