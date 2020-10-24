@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/todo/static/css/main.e601dcce.chunk.css",
-    "main.js": "/todo/static/js/main.3706d1f1.chunk.js",
-    "main.js.map": "/todo/static/js/main.3706d1f1.chunk.js.map",
-    "runtime-main.js": "/todo/static/js/runtime-main.74315f96.js",
-    "runtime-main.js.map": "/todo/static/js/runtime-main.74315f96.js.map",
-    "static/js/2.636ba907.chunk.js": "/todo/static/js/2.636ba907.chunk.js",
-    "static/js/2.636ba907.chunk.js.map": "/todo/static/js/2.636ba907.chunk.js.map",
-    "index.html": "/todo/index.html",
-    "precache-manifest.840129c52610f6490b2463a69e6f4f84.js": "/todo/precache-manifest.840129c52610f6490b2463a69e6f4f84.js",
-    "service-worker.js": "/todo/service-worker.js",
-    "static/css/main.e601dcce.chunk.css.map": "/todo/static/css/main.e601dcce.chunk.css.map",
-    "static/js/2.636ba907.chunk.js.LICENSE.txt": "/todo/static/js/2.636ba907.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/todo/static/media/Overpass-Regular.0807de33.ttf"
+    "main.css": "/todolist/static/css/main.d5795c5f.chunk.css",
+    "main.js": "/todolist/static/js/main.03d2282b.chunk.js",
+    "main.js.map": "/todolist/static/js/main.03d2282b.chunk.js.map",
+    "runtime-main.js": "/todolist/static/js/runtime-main.97699757.js",
+    "runtime-main.js.map": "/todolist/static/js/runtime-main.97699757.js.map",
+    "static/js/2.4be6af41.chunk.js": "/todolist/static/js/2.4be6af41.chunk.js",
+    "static/js/2.4be6af41.chunk.js.map": "/todolist/static/js/2.4be6af41.chunk.js.map",
+    "index.html": "/todolist/index.html",
+    "precache-manifest.ed6f2252b6444d15747461c0ec6ba86d.js": "/todolist/precache-manifest.ed6f2252b6444d15747461c0ec6ba86d.js",
+    "service-worker.js": "/todolist/service-worker.js",
+    "static/css/main.d5795c5f.chunk.css.map": "/todolist/static/css/main.d5795c5f.chunk.css.map",
+    "static/js/2.4be6af41.chunk.js.LICENSE.txt": "/todolist/static/js/2.4be6af41.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/todolist/static/media/Overpass-Regular.0807de33.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.74315f96.js",
-    "static/js/2.636ba907.chunk.js",
-    "static/css/main.e601dcce.chunk.css",
-    "static/js/main.3706d1f1.chunk.js"
+    "static/js/runtime-main.97699757.js",
+    "static/js/2.4be6af41.chunk.js",
+    "static/css/main.d5795c5f.chunk.css",
+    "static/js/main.03d2282b.chunk.js"
   ]
 }
